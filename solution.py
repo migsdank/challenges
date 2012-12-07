@@ -83,6 +83,7 @@ def solve_t(inlist, rspNum):
 ## OUTPUT SOLUTION FOR QUESTION QUERIES
 def solve_q(inlist, rspNum, qstlist):
 	count = 0
+	## TODO:: Try not to NEST for loops
 	for tops in inlist:
 		for qstn in reversed(qstlist):
 			if (count == rspNum):
@@ -110,6 +111,8 @@ def solve_query(qIdx):
 # The story begins here...
 def main():
 	get_input()
+	#TODO:: REMOVE NLIST CREATION FROM INPUT PARSE... these are the last in the input and can be 
+	#       solved as they are parsed.. 
 	for idx in range(0,len(nlist)):
 		solve_query(idx)
 
